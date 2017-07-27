@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default class BaseLayout extends Component {
   render() {
@@ -32,6 +32,10 @@ export default class BaseLayout extends Component {
         fontSize: 30,
         padding: "1rem",
         backgroundColor: "black"
+      },
+      activeLink: {
+        color: "#ff073a",
+        textShadow: "0em 0em 0.5em #d3002b"
       }
     };
 
@@ -46,11 +50,25 @@ export default class BaseLayout extends Component {
               </div>
             </Link>
             <div className="navText" style={style.navStyle}>
-              <Link to="/home">Home</Link>
+              <NavLink to="/home" activeStyle={style.activeLink}>
+                Home
+              </NavLink>
               <span> | </span>
-              <Link to="/about">About</Link>
+              <NavLink to="/about" activeStyle={style.activeLink}>
+                About
+              </NavLink>
               <span> | </span>
-              <Link to="/portfolio">Portfolio</Link>
+              <NavLink to="/portfolio" activeStyle={style.activeLink}>
+                Portfolio
+              </NavLink>
+              <span> | </span>
+              <NavLink to="/references" activeStyle={style.activeLink}>
+                References
+              </NavLink>
+              <span> | </span>
+              <NavLink to="/contact" activeStyle={style.activeLink}>
+                Contact
+              </NavLink>
             </div>
           </header>
         </div>
