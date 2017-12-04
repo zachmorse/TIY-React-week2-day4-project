@@ -37,7 +37,6 @@ html {
 .textBlock {
   min-height: 0px;
   background-color: black;
-  /* filter: blur(10px); */
 }
 
 .parallaxTwo {
